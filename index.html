@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Burger Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="left-side">
+            <i class="fas fa-hamburger"></i>
+            <span>Cardápio</span>
+            <span>Promoções</span>
+            <span>Pedidos</span>
+        </div>
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar lanche...">
+        </div>
+    </header>
+
+    <main class="desktop">
+        <div class="grid-products">
+            <div class="product-icon" onclick="openModal('X-Burger Classic', 'Pão brioche, carne 160g e queijo cheddar.', 'R$ 28,90', 'imagens/burger.png')">
+                <img src="imagens/burger.png" alt="Burger">
+                <span>X-Classic</span>
+            </div>
+            
+            <div class="product-icon" onclick="openModal('Batata Suprema', 'Batata frita com bacon e molho especial.', 'R$ 19,90', 'imagens/batata.png')">
+                <img src="imagens/burger.png" alt="Burger">
+                <span>Batata Frita</span>
+            </div>
+
+            <div class="product-icon" onclick="openModal('Combo Família', '2 Burgers, 2 Batatas e Refri 2L.', 'R$ 75,00', 'imagens/combo.png')">
+                <img src="imagens/burger.png" alt="Burger">
+                <span>Combo Pro</span>
+            </div>
+
+            <div class="product-icon" onclick="window.location.href='produto.html'">
+                <img src="imagens/burger.png" alt="Burger">
+                <span>Bebidas</span>
+            </div>
+        </div>
+
+        <nav class="dock-container">
+            <div class="dock">
+                <div class="product-icon" onclick="window.location.href='produto.html'">
+                <img src="imagens/bebida.png" alt="Bebidas">
+                <span>Bebidas</span>
+            </div>
+                <div class="product-icon" onclick="window.location.href='produto.html'">
+                <img src="imagens/bebida.png" alt="Bebidas">
+                <span>Bebidas</span>
+            </div>
+                <div class="product-icon" onclick="window.location.href='produto.html'">
+                <img src="imagens/bebida.png" alt="Bebidas">
+                <span>Bebidas</span>
+            </div>
+            </div>
+        </nav>
+    </main>
+
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="buttons">
+                    <span class="close" onclick="closeModal()"></span>
+                    <span class="minimize"></span>
+                    <span class="maximize"></span>
+                </div>
+                <span id="modal-title">Detalhes do Pedido</span>
+            </div>
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Lanche Selecionado">
+                
+                <p id="modal-desc"></p>
+                <br>
+                <h2 id="modal-price" style="color: #e67e22;"></h2>
+                <button class="buy-btn">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
